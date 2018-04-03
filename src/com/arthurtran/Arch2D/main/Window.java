@@ -170,6 +170,38 @@ public class Window {
 	}
 	
 	/**
+	 * Gets the width of the window.
+	 * @return Returns the width of window.
+	 */
+	public double getFrameWidth() {
+		return frame.getWidth();
+	}
+	
+	/**
+	 * Gets the height of the window
+	 * @return Returns the height of the window.
+	 */
+	public double getFrameHeight() {
+		return frame.getHeight();
+	}
+	
+	/**
+	 * Gets the fullscreen width.
+	 * @return Returns the fullscreen width.
+	 */
+	public double getFullWidth() {
+		return screenSize.getWidth();
+	}
+	
+	/**
+	 * Gets the fullscreen height.
+	 * @return Returns the fullscreen height.
+	 */
+	public double getFullHeight() {
+		return screenSize.getHeight();
+	}
+	
+	/**
 	 * @return Returns the number needed to scale objects' height in relation to the screen sized based on initial stated width.
 	 */
 	public double getScaleWidth() {
