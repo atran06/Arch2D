@@ -27,7 +27,7 @@ public class Window {
 	/**
 	 * @param width - The width that is used to make a windowed screen and calculate the scale number.
 	 * @param height - The height that is used to make a windowed screen and calculate the scale number.
-	 */
+	 */ 
 	public Window(double width, double height) {
 		this.width = width;
 		this.height = height;
