@@ -9,7 +9,6 @@ public class BufferedImageLoader {
 
 	private BufferedImage image;
 	
-	
 	/**
 	 * Loads a buffered image.
 	 * @param path - Path to the image.
