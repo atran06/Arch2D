@@ -8,8 +8,15 @@ import java.util.List;
 import javax.swing.ImageIcon;
 
 public class ImageLoader {
-		
+	
+	/**
+	 * Loads an image.
+	 * @param path - The path to the image.
+	 * @return Returns the image.
+	 * <br><br>
+	 * Note that if failed to find specified path, an error will show up in console.
+	 */
 	public Image loadImage(String path) {
-		return new ImageIcon(getClass().getResource(path)).getImage();
+		return new ImageIcon(getClass().getClassLoader().getResource(path)).getImage();
 	}
 }
