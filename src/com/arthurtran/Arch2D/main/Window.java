@@ -80,6 +80,12 @@ public class Window {
 	
 	/**
 	 * Creates a new full screen window.
+	 * <br><br>
+	 * Utilizes JFrame to create the window. Sets the size of the frame to be the size of the screen automatically.
+	 * The width and height specified in the constructor is for windowed size and setting the scale width.
+	 * <br><br>
+	 * For example, if width is set at 500, and height at 500, anything bigger with scale up and anything smaller
+	 * will scale down.
 	 */
 	public void createWindowFullscreen() {
 		screenSize = Toolkit.getDefaultToolkit().getScreenSize();
