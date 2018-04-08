@@ -155,6 +155,7 @@ public class Window {
 		
 		frame.setExtendedState(JFrame.NORMAL);
 		frame.setUndecorated(false);
+		frame.setLocation((int) ((fullWidth / 2) - (width / 2)), (int) ((fullHeight / 2) - (height / 2)));
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 		
@@ -219,6 +220,20 @@ public class Window {
 	 */
 	public double getFullHeight() {
 		return screenSize.getHeight();
+	}
+
+	/**
+	 * @return Returns the size of the paintable canvas' width;
+	 */
+	public double getPaintableWidth() {
+		return frame.getContentPane().getWidth();
+	}
+
+	/**
+	 * @return Returns the size of the paintable canvas' height;
+	 */
+	public double getPaintableHeight() {
+		return frame.getContentPane().getHeight();
 	}
 	
 	/**
