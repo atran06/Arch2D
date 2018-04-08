@@ -16,9 +16,9 @@ public class Window {
 	private Dimension screenSize;
 	private Canvas canvas;
 	private JFrame frame;
-	
+
 	/**
-	 * @param A canvas or class that extends Canvas
+	 * @param A paintable canvas
 	 */
 	public Window(Canvas canvas) {
 		this.canvas = canvas;
@@ -166,6 +166,19 @@ public class Window {
 	 */
 	public JFrame getFrame() {
 		return frame;
+	}
+	
+	/**
+	 * @return Returns whether or not the window is fullscreen or not.
+	 */
+	public boolean isFullscreen() {
+		if(frame.getExtendedState() == JFrame.MAXIMIZED_BOTH) {
+			return true;
+		} else if(frame.getExtendedState() == JFrame.NORMAL) {
+			return false;
+		}
+		
+		 return false;
 	}
 	
 	/**
