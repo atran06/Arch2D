@@ -156,6 +156,7 @@ public class Window {
 		frame.setExtendedState(JFrame.NORMAL);
 		frame.setUndecorated(false);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
 		
 		frame.pack();
 	}
