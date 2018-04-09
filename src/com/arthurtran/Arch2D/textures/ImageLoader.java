@@ -1,5 +1,12 @@
 package com.arthurtran.Arch2D.textures;
 
+/*
+ * Arch2D | A 2D Java game library based in Java Swing.
+ *
+ * Copyright (c) 2018 Arthur Tran
+ * https://arthurtran.com/
+ */
+
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.util.LinkedList;
