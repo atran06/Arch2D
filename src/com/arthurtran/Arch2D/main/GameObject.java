@@ -1,5 +1,6 @@
 package com.arthurtran.Arch2D.main;
 
+import java.awt.*;
 import java.awt.geom.Rectangle2D;
 
 public abstract class GameObject {
@@ -14,7 +15,7 @@ public abstract class GameObject {
         this.id = id;
     }
 
-    public abstract void render();
+    public abstract void paintComponent(Graphics g);
     public abstract void tick();
     public abstract Rectangle2D getBounds();
 
