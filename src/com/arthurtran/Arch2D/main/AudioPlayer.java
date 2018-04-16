@@ -60,7 +60,7 @@ public class AudioPlayer {
         FloatControl gainControl = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
         return (float) Math.pow(10f, gainControl.getValue() / 20f);
     }
-    
+
     public void setVolume(float volume) {
         if (volume < 0f || volume > 1f) {
             throw new IllegalArgumentException("Volume not valid: " + volume);
