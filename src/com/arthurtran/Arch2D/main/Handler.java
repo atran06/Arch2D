@@ -57,4 +57,11 @@ public class Handler {
     public void clearLevel() {
         list.clear();
     }
+
+    /**
+     * @return Returns the list of <em>GameObjects</em>
+     */
+    public List<GameObject> getList() {
+        return list;
+    }
 }
