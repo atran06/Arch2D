@@ -49,6 +49,7 @@ public interface Engine {
 			///// Updates the FPS/////
 			if (lastFPSTime >= 1000000000) {
 				System.out.println("FPS: " + fps);
+				Handler.transferFPS(fps);
 				fps = 0;
 				lastFPSTime = 0;
 			}

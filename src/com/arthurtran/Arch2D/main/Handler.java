@@ -8,6 +8,8 @@ public class Handler {
 
     private List<GameObject> list = new LinkedList<>();
 
+    private static long fps;
+
     /**
      * The <em>handler</em> class handles all of the <em>gameObjects</em> in the game. <br><br>
      * It puts them all into a list and ticks and renders each gameObject in this list.
@@ -63,5 +65,13 @@ public class Handler {
      */
     public List<GameObject> getList() {
         return list;
+    }
+
+    public static void transferFPS(long num) {
+        fps = num;
+    }
+
+    public long getFPS() {
+        return fps;
     }
 }
