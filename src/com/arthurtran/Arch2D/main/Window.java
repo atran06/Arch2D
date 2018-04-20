@@ -202,7 +202,7 @@ public class Window {
 	 * @return Returns the width of window.
 	 */
 	public double getFrameWidth() {
-		return frame.getWidth();
+		return width;
 	}
 	
 	/**
@@ -210,7 +210,7 @@ public class Window {
 	 * @return Returns the height of the window.
 	 */
 	public double getFrameHeight() {
-		return frame.getHeight();
+		return height;
 	}
 	
 	/**
@@ -227,20 +227,6 @@ public class Window {
 	 */
 	public double getFullHeight() {
 		return screenSize.getHeight();
-	}
-
-	/**
-	 * @return Returns the size of the paintable canvas' width;
-	 */
-	public double getPaintableWidth() {
-		return frame.getContentPane().getWidth();
-	}
-
-	/**
-	 * @return Returns the size of the paintable canvas' height;
-	 */
-	public double getPaintableHeight() {
-		return frame.getContentPane().getHeight();
 	}
 	
 	/**
