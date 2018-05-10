@@ -7,8 +7,8 @@ public class Animation {
 
     private int speed;
     private int frames;
-    private int counts = 0;
     private int index = 0;
+    private int imgIndex = 0;
 
     private BufferedImage[] images;
     private BufferedImage currentImage;
@@ -34,23 +34,31 @@ public class Animation {
     }
 
     public void nextFrame() {
-        for(int i = 0; i < this.images.length; i++) {
-            if(counts == i) {
-                currentImage = images[i];
-            }
-        }
-        counts++;
+        currentImage = images[imgIndex];
 
-        if(counts > frames) {
-            counts = 0;
+        imgIndex++;
+
+        if(imgIndex + 1 > frames) {
+            imgIndex = 0;
         }
     }
 
     public void drawAnimation(Graphics g, int x, int y, int scaleX, int scaleY) {
+        Graphics2D g2 = (Graphics2D) g;
+
+        g2.scale(scaleX, scaleY);
         g.drawImage(currentImage, x, y, null);
     }
 
     public BufferedImage getCurrentImage() {
         return currentImage;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    public int getSpeed() {
+        return this.speed;
     }
 }

@@ -7,9 +7,8 @@ package com.arthurtran.Arch2D.main;
  * https://arthurtran.com/
  */
 
-import java.awt.Canvas;
-import java.awt.Dimension;
-import java.awt.Toolkit;
+import java.awt.*;
+import java.util.HashMap;
 
 import javax.swing.JFrame;
 
@@ -228,18 +227,16 @@ public class Window {
 	public double getFullHeight() {
 		return screenSize.getHeight();
 	}
-	
+
 	/**
-	 * @return Returns the number needed to scale objects' height in relation to the screen sized based on initial stated width.
+	 * Gets the scale width and height.
+	 * @return Returns a map containing the scaleWidth and scaleHeight.
 	 */
-	public double getScaleWidth() {
-		return (double) (frame.getContentPane().getWidth()) / width;
-	}
-	
-	/**
-	 * @return Returns the number needed to scale objects' width in relation to the screen size based on initial stated height.
-	 */
-	public double getScaleHeight() {
-		return (double) (frame.getContentPane().getHeight()) / height;
+	public HashMap<String, Double> getScale() {
+		HashMap<String, Double> map = new HashMap<>();
+		map.put("scaleWidth", (frame.getContentPane().getWidth()) / width);
+		map.put("scaleHeight", (frame.getContentPane().getHeight()) / height);
+
+		return map;
 	}
 }

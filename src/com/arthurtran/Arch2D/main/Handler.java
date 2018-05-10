@@ -23,8 +23,8 @@ public class Handler {
      * @param Graphics
      */
     public void paintComponent(Graphics g) {
-        for(GameObject tempObject : list) {
-            tempObject.paintComponent(g);
+        for (int i = 0; i < list.size(); i++) {
+            list.get(i).paintComponent(g);
         }
     }
 
@@ -32,8 +32,8 @@ public class Handler {
      * Ticks through each gameObject in list.
      */
     public void tick() {
-        for (GameObject tempObject : list) {
-            tempObject.tick();
+        for (int i = 0; i < list.size(); i++) {
+            list.get(i).tick();
         }
     }
 

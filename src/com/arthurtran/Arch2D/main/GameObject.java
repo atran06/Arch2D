@@ -9,7 +9,7 @@ public abstract class GameObject {
     protected double velX, velY;
     protected Enum id;
 
-    public GameObject(int x, int y, Enum id) {
+    public GameObject(double x, double y, Enum id) {
         this.x = x;
         this.y = y;
         this.id = id;
@@ -18,6 +18,10 @@ public abstract class GameObject {
     public abstract void paintComponent(Graphics g);
     public abstract void tick();
     public abstract Rectangle2D getBounds();
+    public abstract Rectangle2D getBoundsRight();
+    public abstract Rectangle2D getBoundsLeft();
+    public abstract Rectangle2D getBoundsTop();
+    public abstract Rectangle2D getBoundsBottom();
 
     public double getX() {
         return x;

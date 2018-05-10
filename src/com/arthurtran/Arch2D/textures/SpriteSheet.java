@@ -12,16 +12,19 @@ import java.awt.image.BufferedImage;
 public class SpriteSheet {
 
 	private BufferedImage spriteSheet;
-	private int resolution;
-	
+	private int resolutionX;
+	private int resolutionY;
+
 	/**
 	 * Spritesheet class that loads in an image that can grab a sub image out of.
 	 * @param spriteSheet - A buffered image.
-	 * @param resolution - The resolution of each image (eg. 32, 64, 128).
+	 * @param resolutionX - The resolutionWidth of each image (eg. 32, 64, 128).
+	 * @param resolutionY - The resolutionHeight of each image (eg. 32, 64, 128).
 	 */
-	public SpriteSheet(BufferedImage spriteSheet, int resolution) {
+	public SpriteSheet(BufferedImage spriteSheet, int resolutionX, int resolutionY) {
 		this.spriteSheet = spriteSheet;
-		this.resolution = resolution;
+		this.resolutionX = resolutionX;
+		this.resolutionY = resolutionY;
 	}
 	
 	/**
@@ -33,6 +36,6 @@ public class SpriteSheet {
 	 * @return Returns the sub image.
 	 */
 	public BufferedImage getImg(int col, int row, int width, int height) {
-		return spriteSheet.getSubimage((col * resolution) - resolution, (row * resolution) - resolution, width, height);
+		return spriteSheet.getSubimage((col * resolutionX) - resolutionX, (row * resolutionY) - resolutionY, width, height);
 	}
 }
